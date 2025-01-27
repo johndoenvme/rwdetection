@@ -18,4 +18,4 @@ To start the application, navigate to the project directory and run `python main
 - **Full Execution:** Set the `demo` flag to `False` and download the CLEAR dataset from [Kaggle](https://www.kaggle.com/datasets/johndoenvme/clear-command-level-annotated-ransomware) to the /CLEAR_Dataset folder.
 
 # License
-CC BY-NC-SA 4.0
+[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
