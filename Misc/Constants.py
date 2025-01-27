@@ -1,0 +1,2 @@
+NVMeOpCodeWRITE = 1
+NVMeOpCodeREAD = 2
