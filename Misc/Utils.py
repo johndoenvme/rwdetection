@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-from typing import List, Any
+from typing import List
 from Misc.ParsedData import ParsedData
 from Misc.ModelInput import ModelInput
 import glob
@@ -15,9 +15,13 @@ import scipy.stats as stats
 import math
 
 
-def read_data(data_path, model_name) -> List[ParsedData]:
-    metadata_path = os.path.join(data_path, 'metadata.csv')
-    df_metadata = pd.read_csv(metadata_path)
+def read_data(data_path, model_name, demo_mode) -> List[ParsedData]:
+    if demo_mode:
+        metadata_path = os.path.join(data_path, 'metadata.parquet')
+        df_metadata = pd.read_parquet(metadata_path, engine='pyarrow')
+    else:
+        metadata_path = os.path.join(data_path, 'metadata.csv')
+        df_metadata = pd.read_csv(metadata_path)
     df_metadata.set_index('Recording Index', inplace=True)
     parsed_data_list = []
 

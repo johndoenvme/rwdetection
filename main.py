@@ -10,7 +10,7 @@ DEMO_MODE = True
 
 def execute_experiment():
     #  Read and adapt data
-    data_list = Utils.read_data(DEMO_DATA_PATH, MODEL)  # Change to DATA_PATH for full execution
+    data_list = Utils.read_data(DEMO_DATA_PATH, MODEL, DEMO_MODE)  # Change to DATA_PATH for full execution
 
     #  Create chunks
     data_with_chunks_list = Utils.run_chunker(data_list, MODEL)
